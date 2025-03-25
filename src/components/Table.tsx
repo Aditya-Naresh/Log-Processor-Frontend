@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { API_ENDPOINT_SERVER } from "./servers.tsx";
-
+import {useRouter} from 'next/navigation';
 interface LogData {
   total_logs: number;
   error_logs: number;
@@ -16,7 +16,7 @@ const Table = () => {
   const [logs, setLogs] = useState<LogsResponse | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5; // Show 5 rows per page
-
+  const router = useRouter()
   const reRender = useSelector((state) => state.log.reRender);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Table = () => {
             {paginatedLogs.length > 0 ? (
               paginatedLogs.map(([id, log]) => (
                 <tr key={id} className="border-b hover:bg-gray-100">
-                  <td className="px-4 py-2 font-mono text-xs text-gray-800 truncate">{id}</td>
+                  <td className="px-4 py-2 font-mono text-xs text-gray-800 truncate" onClick={() => {router.push(`/file/${id}`)}}>{id}</td>
                   <td className="px-4 py-2 text-gray-900">{log.total_logs}</td>
                   <td className="px-4 py-2 text-red-500">{log.error_logs}</td>
                   <td className="px-4 py-2 font-semibold text-green-600">{log.success_rate}%</td>
