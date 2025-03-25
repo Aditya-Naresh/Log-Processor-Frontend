@@ -27,7 +27,7 @@ const GoogleAuth = () => {
                 router.push("/dashboard");
                 
             } else {
-                router.push("/login");
+                router.push("/");
             }
         });
 
