@@ -1,9 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Name
+
+## Overview
+A brief description of your project, its purpose, and key features.
+
+## Prerequisites
+- Node.js
+- npm/yarn/pnpm/bun
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+```bash
+https://github.com/Aditya-Naresh/Log-Processor-Frontend.git
+cd Log-Processor-Frontend
+```
 
+### 2. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 3. Environment Setup
+Create a `.env.local` file in the project root and add the following environment variables:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+⚠️ **Important:** Never commit your actual credentials to version control. Always use environment variables and add `.env.local` to your `.gitignore`.
+
+### 4. Run the Development Server
 ```bash
 npm run dev
 # or
@@ -16,21 +49,26 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
+- `app/`: Next app directory
+- `components/`: Reusable React components
+- `helper/`: Utility functions and library such as Subase Configuration
+- `store/`: Redux setup
+- `hooks`: Custom Hooks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+- Next App Router
+- Supabase Authentication
+- Responsive Design
 
-## Learn More
+## Technologies Used
+- Next
+- Supabase
+- React
+- TypeScript
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Backend Link: [https://github.com/Aditya-Naresh/Log-Processor-Backend.git](https://github.com/Aditya-Naresh/Log-Processor-Backend.git)
